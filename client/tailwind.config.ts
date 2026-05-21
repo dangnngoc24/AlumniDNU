@@ -10,7 +10,22 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['var(--font-open-sans)', 'Open Sans', 'sans-serif'],
+  		},
+  		maxWidth: {
+  			content: '1420px',
+  		},
   		colors: {
+  			dnu: {
+  				blue: '#1D4393',
+  				'navy': '#003d7a',
+  				'light': '#1a7fd4',
+  				green: '#1BAE64',
+  				coral: '#E85D5D',
+  				orange: '#F3790D',
+				red: '#FC4C37',
+  			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

@@ -1,15 +1,18 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Open_Sans } from "next/font/google"
 import "./globals.css"
-import Link from "next/link"
+import { SiteFooter } from "@/components/layout/site-footer"
 
-const inter = Inter({ subsets: ["latin"] })
+const openSans = Open_Sans({
+  subsets: ["latin", "vietnamese"],
+  display: "swap",
+  variable: "--font-open-sans",
+})
 
 export const metadata: Metadata = {
-  title: "Next.js 15 Blog",
-  description: "A simple blog built with Next.js 15",
-    generator: 'v0.dev'
+  title: "DNU Alumni Network",
+  description: "Kết nối hôm nay - Đồng hành tương lai",
 }
 
 export default function RootLayout({
@@ -18,25 +21,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <header className="bg-white shadow-sm">
-          <div className="container mx-auto px-4 py-6">
-            <h1 className="text-2xl font-bold text-center">
-              <Link href="/" className="text-blue-600 hover:text-blue-800">
-                Next.js and Strapi Preview Example
-              </Link>
-            </h1>
-          </div>
-        </header>
-        {children}
-        <footer className="bg-gray-50 mt-12">
-          <div className="container mx-auto px-4 py-8">
-            <p className="text-center text-gray-500">
-              © {new Date().getFullYear()} Next.js 15 Blog. All rights reserved.
-            </p>
-          </div>
-        </footer>
+    <html lang="vi" suppressHydrationWarning className={openSans.variable}>
+      <body className={`${openSans.className} flex min-h-screen flex-col font-sans antialiased`}>
+        <div className="flex-1">{children}</div>
+        <SiteFooter />
       </body>
     </html>
   )

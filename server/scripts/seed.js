@@ -240,10 +240,12 @@ async function importSeedData() {
   // Allow read of application content types
   await setPublicPermissions({
     article: ['find', 'findOne'],
+    post: ['find', 'findOne'],
     category: ['find', 'findOne'],
     author: ['find', 'findOne'],
     global: ['find', 'findOne'],
     about: ['find', 'findOne'],
+    alumni: ['find', 'findOne', 'create'],
   });
 
   // Create all entries

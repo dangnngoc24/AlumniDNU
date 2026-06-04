@@ -4,4 +4,10 @@ export default ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
+  // Upload video lớn cần timeout dài hơn mặc định (~330s)
+  http: {
+    serverOptions: {
+      requestTimeout: env.int('REQUEST_TIMEOUT_MS', 600_000),
+    },
+  },
 });

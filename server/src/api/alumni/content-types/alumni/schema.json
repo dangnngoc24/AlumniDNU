@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alumnis",
+  "info": {
+    "singularName": "alumni",
+    "pluralName": "alumnis",
+    "displayName": "Alumni",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfBirth": {
+      "type": "date",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "currentAddress": {
+      "type": "text",
+      "required": true
+    },
+    "courseCode": {
+      "type": "enumeration",
+      "enum": [
+        "k12",
+        "k13",
+        "k14"
+      ],
+      "required": true
+    },
+    "major": {
+      "type": "enumeration",
+      "enum": [
+        "Công nghệ thông tin",
+        "An toàn thông tin",
+        "Quản trị kinh doanh",
+        "Kế toán"
+      ],
+      "required": true
+    },
+    "faculty": {
+      "type": "enumeration",
+      "enum": [
+        "Khoa Công nghệ thông tin",
+        "Khoa Điện tử viễn thông",
+        "Khoa Kinh tế và Quản trị"
+      ],
+      "required": true
+    },
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "jobTitle": {
+      "type": "string",
+      "required": true
+    },
+    "industry": {
+      "type": "string",
+      "required": true
+    },
+    "socialLink": {
+      "type": "string",
+      "required": true
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "required": false
+    }
+  }
+}

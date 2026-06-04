@@ -18,12 +18,12 @@ const NAV_ITEMS = [
   { label: "Trang chủ", href: "/" },
   { label: "Giới thiệu", href: "/gioi-thieu" },
   { label: "Đăng ký thông tin Alumni", href: "/dang-ky" },
-  { label: "Alumni Stories", href: "#stories" },
-  { label: "Tin tức & Sự kiện", href: "#tin-tuc" },
+  { label: "Alumni Stories", href: "/alumni-stories" },
+  { label: "Tin tức & Sự kiện", href: "/tin-tuc" },
   { label: "Việc làm & Kết nối nghề nghiệp", href: "#viec-lam" },
   { label: "Đồng hành cùng DNU", href: "#dong-hanh" },
-  { label: "Thư viện ảnh", href: "#thu-vien" },
-  { label: "Liên hệ", href: "#lien-he" },
+  { label: "Thư viện ảnh", href: "/thu-vien-anh" },
+  { label: "Liên hệ", href: "/lien-he" },
 ] as const
 
 export function SiteHeader({
@@ -33,6 +33,7 @@ export function SiteHeader({
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
+    <>
     <header
       className={cn(
         "z-50 bg-[#F4F4F4] shadow-sm",
@@ -107,14 +108,14 @@ export function SiteHeader({
         </PageContainer>
       </div>
 
-      <nav className="bg-dnu-navy text-white">
+      <nav className="bg-[#1D4393] text-white">
         <PageContainer>
           <ul className="hidden flex-wrap items-center py-7 text-base font-semibold xl:flex justify-between">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="whitespace-nowrap transition-colors hover:text-[#FC4C37]"
+                  className="whitespace-nowrap transition-colors hover:text-[#91CCFF]"
                 >
                   {item.label}
                 </Link>
@@ -128,7 +129,7 @@ export function SiteHeader({
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="block px-2 py-2 hover:bg-white/10"
+                    className="block px-2 py-2 transition-colors hover:text-[#91CCFF]"
                     onClick={() => setMobileOpen(false)}
                   >
                     {item.label}
@@ -139,10 +140,11 @@ export function SiteHeader({
           )}
         </PageContainer>
       </nav>
-
-      {breadcrumbItems && breadcrumbItems.length > 0 && (
-        <BreadcrumbBar items={breadcrumbItems} />
-      )}
     </header>
+
+    {breadcrumbItems && breadcrumbItems.length > 0 && (
+      <BreadcrumbBar items={breadcrumbItems} />
+    )}
+    </>
   )
 }

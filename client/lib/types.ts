@@ -58,14 +58,21 @@ export interface QuoteBlock {
 export interface MediaBlock {
   __component: "shared.media"
   id: number
-  file: {
-    id: number
-    documentId: string
-    url: string
-    alternativeText: string
-    width?: number
-    height?: number
-  }
+  title?: string | null
+  file:
+    | {
+        id?: number
+        documentId?: string
+        url?: string
+        alternativeText?: string | null
+        mime?: string | null
+        name?: string | null
+        ext?: string | null
+        width?: number
+        height?: number
+        data?: MediaBlock["file"]
+      }
+    | null
 }
 
 export interface SliderBlock {

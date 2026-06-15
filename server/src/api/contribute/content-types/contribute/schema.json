@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contributes",
+  "info": {
+    "singularName": "contribute",
+    "pluralName": "contributes",
+    "displayName": "Contribute",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "contribute_category": {
+      "type": "enumeration",
+      "enum": [
+        "Học bổng cho sinh viên",
+        "Tài trợ thiết bị học tập",
+        "Hỗ trợ thực tập – việc làm",
+        "Tham gia giảng dạy chuyên đề",
+        "Mentoring cho sinh viên",
+        "Đóng góp quỹ phát triển"
+      ]
+    },
+    "contribute_content": {
+      "type": "text"
+    }
+  }
+}

@@ -21,7 +21,7 @@ const NAV_ITEMS = [
   { label: "Alumni Stories", href: "/alumni-stories" },
   { label: "Tin tức & Sự kiện", href: "/tin-tuc" },
   { label: "Việc làm & Kết nối nghề nghiệp", href: "#viec-lam" },
-  { label: "Đồng hành cùng DNU", href: "#dong-hanh" },
+  { label: "Đồng hành cùng DNU", href: "/dong-hanh-cung-dnu" },
   { label: "Thư viện ảnh", href: "/thu-vien-anh" },
   { label: "Liên hệ", href: "/lien-he" },
 ] as const

@@ -76,7 +76,7 @@ const QUICK_ACCESS_CARDS: QuickAccessCard[] = [
       </>
     ),
     description: "Đóng góp và hỗ trợ sự phát triển của Đại học Đồng Nai",
-    href: "#dong-hanh",
+    href: "/dong-hanh-cung-dnu",
     icon: DongHanhNhaTruongIcon,
     theme: {
       border: "border-dnu-orange",
